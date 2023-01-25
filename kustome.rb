@@ -5,21 +5,21 @@
 class Kustome < Formula
   desc "This tool can be used to initalize a kustomize.yaml for kustomize"
   homepage "https://github.com/steffakasid/kusto-me"
-  version "0.5"
+  version "0.6"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/steffakasid/kusto-me/releases/download/0.5/kustome_0.5_Darwin_x86_64.tar.gz"
-      sha256 "1b4308bfee34c762d1b38b0d538f4c609a96a4b76ba9be7bf8f796d7d9f25365"
+      url "https://github.com/steffakasid/kusto-me/releases/download/0.6/kustome_0.6_Darwin_x86_64.tar.gz"
+      sha256 "4dcd142dc2cf9fd63873d3a2f3d048141263284506d8b099f7036b3a1b37202b"
 
       def install
         bin.install "kustome"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/steffakasid/kusto-me/releases/download/0.5/kustome_0.5_Darwin_arm64.tar.gz"
-      sha256 "00e53507f7c75a5760985bd0e4926d0efd6a887d1aea3966b2514f63019705b4"
+      url "https://github.com/steffakasid/kusto-me/releases/download/0.6/kustome_0.6_Darwin_arm64.tar.gz"
+      sha256 "d3d38d6ba73cebd0f622d0b6b93cd79a241e576ec1335370d9593d842da672b6"
 
       def install
         bin.install "kustome"
@@ -29,16 +29,16 @@ class Kustome < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/steffakasid/kusto-me/releases/download/0.5/kustome_0.5_Linux_arm64.tar.gz"
-      sha256 "8b38f667f300e92d88a689c4ccea98548687fab7393ecbf1d76f41d39e8aa007"
+      url "https://github.com/steffakasid/kusto-me/releases/download/0.6/kustome_0.6_Linux_arm64.tar.gz"
+      sha256 "4f5d3187a9e257e93f5803835f5562e66a6b8c6062ae8b2b66fb92b5e47403cc"
 
       def install
         bin.install "kustome"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/steffakasid/kusto-me/releases/download/0.5/kustome_0.5_Linux_x86_64.tar.gz"
-      sha256 "7f704d96b2a1405e7aab1b31b5b898cf8022ef583796775eaeac1288760eda9f"
+      url "https://github.com/steffakasid/kusto-me/releases/download/0.6/kustome_0.6_Linux_x86_64.tar.gz"
+      sha256 "10e27b9b3d80c585c42cb8a0684d230151552b75cd3ddafd4524ed30d544b44d"
 
       def install
         bin.install "kustome"
