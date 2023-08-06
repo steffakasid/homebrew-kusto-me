@@ -5,21 +5,21 @@
 class Kustome < Formula
   desc "This tool can be used to initalize a kustomize.yaml for kustomize"
   homepage "https://github.com/steffakasid/kusto-me"
-  version "0.10"
+  version "0.11"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/steffakasid/kusto-me/releases/download/v0.10/kustome_0.10_darwin_arm64.tar.gz"
-      sha256 "431aaa2408b380c2af887625d6d99a8827b5b9aff54852d775e777ef319b4cfa"
+      url "https://github.com/steffakasid/kusto-me/releases/download/v0.11/kustome_0.11_darwin_arm64.tar.gz"
+      sha256 "8b9344f8e0f14dd3aa7c50cb27c49a4aee9213ae677722347e5592530f2a9a74"
 
       def install
         bin.install "kustome"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/steffakasid/kusto-me/releases/download/v0.10/kustome_0.10_darwin_amd64.tar.gz"
-      sha256 "71fb985321a225139fb596f5e2487f6e678b6e27fed973f2b74203b751ccbd30"
+      url "https://github.com/steffakasid/kusto-me/releases/download/v0.11/kustome_0.11_darwin_amd64.tar.gz"
+      sha256 "faf9ef8af1a61f94ad6fdea2998405f099df0f44f4dc4a547f24bda08e7560e5"
 
       def install
         bin.install "kustome"
@@ -29,16 +29,16 @@ class Kustome < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/steffakasid/kusto-me/releases/download/v0.10/kustome_0.10_linux_arm64.tar.gz"
-      sha256 "c402558fcfe55401be4c8682342b96c8386029d9f5690dcf5f0eb5ca64517e7f"
+      url "https://github.com/steffakasid/kusto-me/releases/download/v0.11/kustome_0.11_linux_arm64.tar.gz"
+      sha256 "532aaecab90bd3f460ca73977f24217a0f6ee2f7cbcf3ffe978f23b45ff01bd4"
 
       def install
         bin.install "kustome"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/steffakasid/kusto-me/releases/download/v0.10/kustome_0.10_linux_amd64.tar.gz"
-      sha256 "a9cc45e2471eaf92d9120505b6990729d3006d256228b2bc118fdac1f2a46936"
+      url "https://github.com/steffakasid/kusto-me/releases/download/v0.11/kustome_0.11_linux_amd64.tar.gz"
+      sha256 "2dcf734468358838c55387cf49b42ff734dae0c507008eec650469e4f1c4f172"
 
       def install
         bin.install "kustome"
