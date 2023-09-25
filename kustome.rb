@@ -5,21 +5,21 @@
 class Kustome < Formula
   desc "This tool can be used to initalize a kustomize.yaml for kustomize"
   homepage "https://github.com/steffakasid/kusto-me"
-  version "0.11"
+  version "0.12"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/steffakasid/kusto-me/releases/download/v0.11/kustome_0.11_darwin_arm64.tar.gz"
-      sha256 "8b9344f8e0f14dd3aa7c50cb27c49a4aee9213ae677722347e5592530f2a9a74"
+    if Hardware::CPU.intel?
+      url "https://github.com/steffakasid/kusto-me/releases/download/v0.12/kustome_0.12_darwin_amd64.tar.gz"
+      sha256 "18f5757236c45593cba1589c6ece08339b4d204c3f24fa35be22b5f96fdaa8fe"
 
       def install
         bin.install "kustome"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/steffakasid/kusto-me/releases/download/v0.11/kustome_0.11_darwin_amd64.tar.gz"
-      sha256 "faf9ef8af1a61f94ad6fdea2998405f099df0f44f4dc4a547f24bda08e7560e5"
+    if Hardware::CPU.arm?
+      url "https://github.com/steffakasid/kusto-me/releases/download/v0.12/kustome_0.12_darwin_arm64.tar.gz"
+      sha256 "e1068c1c2df9f27841185bb3d55c1e4b708cb519268a8763cbaa8e6b4a071a1b"
 
       def install
         bin.install "kustome"
@@ -28,17 +28,17 @@ class Kustome < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/steffakasid/kusto-me/releases/download/v0.11/kustome_0.11_linux_arm64.tar.gz"
-      sha256 "532aaecab90bd3f460ca73977f24217a0f6ee2f7cbcf3ffe978f23b45ff01bd4"
+    if Hardware::CPU.intel?
+      url "https://github.com/steffakasid/kusto-me/releases/download/v0.12/kustome_0.12_linux_amd64.tar.gz"
+      sha256 "eacd2b65e3f59bb24cd5cee153daa4ec12c846bb81a47202c56679a889a7b4a1"
 
       def install
         bin.install "kustome"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/steffakasid/kusto-me/releases/download/v0.11/kustome_0.11_linux_amd64.tar.gz"
-      sha256 "2dcf734468358838c55387cf49b42ff734dae0c507008eec650469e4f1c4f172"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/steffakasid/kusto-me/releases/download/v0.12/kustome_0.12_linux_arm64.tar.gz"
+      sha256 "5a65f21b01ef6986935acf6c458bcc8cf666bebbef19a261fadd780d83b5d3f9"
 
       def install
         bin.install "kustome"
